@@ -1,3 +1,3 @@
 # terraforminitial
 
-This is fisrt deployment
+This is first deployment
