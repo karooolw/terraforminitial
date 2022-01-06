@@ -8,9 +8,7 @@ terraform {
 }
  
 provider "azurerm" {
-  # The "feature" block is required for AzureRM provider 2.x.
-  # If you're using version 1.x, the "features" block is not allowed.
-  version = "~>2.0"
+
   features {}
 }
  
@@ -35,5 +33,5 @@ resource "azurerm_subnet" "subnet" {
   name                 = "subnet"
   resource_group_name  = azurerm_resource_group.tamops.name
   virtual_network_name = azurerm_virtual_network.vnet.name
-  address_prefix       = "192.168.0.0/24"
+  address_prefixes       = "192.168.0.0/24"
 }
